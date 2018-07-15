@@ -181,7 +181,7 @@ def helpmessage():
                     "| • " + key + "sᴛᴀʟᴋᴘɪᴄᴛᴜʀᴇ [ ᴍᴇɴᴛɪᴏɴ ]" + "\n" + \
                     "| • " + key + "sᴛᴀʟᴋᴠɪᴅᴇᴏᴘʀᴏғɪʟᴇ [ ᴍᴇɴᴛɪᴏɴ ]" + "\n" + \
                     "| • " + key + "sᴛᴀʟᴋᴄᴏᴠᴇʀ [ ᴍᴇɴᴛɪᴏɴ ]" + "\n" + \
-                    "| • " + key + "ᴜɴsᴇɴᴅᴄʜᴀᴛ [ ᴏɴ/ᴏғғ ]" + "\n" + \
+                    "| • " + key + "ᴅᴇᴛᴇᴄᴛᴜɴsᴇɴᴅ [ ᴏɴ/ᴏғғ ]" + "\n" + \
                     "| • " + key + "ᴋɪᴄᴋ [ ᴍᴇɴᴛɪᴏɴ ]" + "\n" + \
                     "| • " + key + "ɢʀᴏᴜᴘᴍᴇᴍʙᴇʀʟɪsᴛ" + "\n" + \
                     "| • " + key + "ɢʀᴏᴜᴘɪɴғᴏ" + "\n" + \
@@ -286,8 +286,8 @@ def clientBot(op):
                             elif cmd == "creator":
                                 try:
                                     ret_ = "| • -= ᴀʙᴏᴜᴛ ʙᴏᴛ =-"
-                                    ret_ += "\n| • ᴀᴜᴛʜᴏʀ : ᴅᴡɪᴡɪʀᴀɴᴀᴛʜᴀ_"
-                                    ret_ += "\n| • ᴄʟɪᴇɴᴛ sᴇʀᴠᴇʀ : x.x.x.x.x"
+                                    ret_ += "\n| • ᴀᴜᴛʜᴏʀ : ᴅᴡɪᴡɪʀᴀɴᴀᴛʜᴀ"
+                                    ret_ += "\n| • ᴇᴍᴀɪʟ : dwiwiranatha@gmail.com"
                                     ret_ += "\n| • ᴄᴏɴᴛᴀᴄᴛ ᴀᴅᴍɪɴ : http://line.me/ti/p/_59r6yG7J8"
                                     client.sendMessage(to, str(ret_))
                                 except Exception as e:
@@ -318,10 +318,10 @@ def clientBot(op):
                                 channel = client.getProfileCoverURL(sender)          
                                 path = str(channel)
                                 client.sendImageWithURL(to, path)
-                            elif cmd == "unsendchat on":
+                            elif cmd == "detectunsend on":
                                 settings["unsendMessage"] = True
                                 client.sendMessage(to, "ᴜɴsᴇɴᴅ ᴍᴇssᴀɢᴇ ᴏɴ")
-                            elif cmd == "unsendchat off":
+                            elif cmd == "detectunsend off":
                                 settings["unsendMessage"] = False
                                 client.sendMessage(to, "ᴜɴsᴇɴᴅ ᴍᴇssᴀɢᴇ ᴏғғ")
                             elif cmd.startswith("stalkmid "):
