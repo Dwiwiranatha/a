@@ -262,7 +262,7 @@ def clientBot(op):
                         else:
                             cmd = command(text)
                             if cmd == "help":
-				helpMessage =  helpMessage()
+				helpMessage = helpMessage()
 				contact = client.getContact(sender)
 				icon = "http://dl.profile.line-cdn.net/{}".format(contact.pictureStatus)
 				name = contact.displayName
