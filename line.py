@@ -155,7 +155,7 @@ def command(text):
         cmd = text.lower()
     return cmd
     
-def helpmessage():
+def helpMessage():
     if settings['setKey'] == True:
         key = settings['keyCommand']
     else:
@@ -262,7 +262,7 @@ def clientBot(op):
                         else:
                             cmd = command(text)
                             if cmd == "help":
-				helpMessage =  helpmessage()
+				helpMessage =  helpMessage()
 				contact = client.getContact(sender)
 				icon = "http://dl.profile.line-cdn.net/{}".format(contact.pictureStatus)
 				name = contact.displayName
