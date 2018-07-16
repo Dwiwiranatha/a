@@ -155,7 +155,7 @@ def command(text):
         cmd = text.lower()
     return cmd
     
-def menuHelp():
+def helpmessage():
     if settings['setKey'] == True:
         key = settings['keyCommand']
     else:
@@ -193,7 +193,7 @@ def menuHelp():
                     "| • " + key + "sᴘʏʙᴏᴛ [ ᴏɴ/ᴏғғ/ʀᴇsᴇᴛ ]" + "\n" + \
                     "| • " + key + "sᴄᴀɴ" + "\n" + \
                     "| • # ᴍᴀᴋᴇ ɪᴛ sɪᴍᴘʟᴇ"
-    return menuHelp
+    return helpMessage
 
 def helptexttospeech():
     if settings['setKey'] == True:
@@ -262,12 +262,8 @@ def clientBot(op):
                         else:
                             cmd = command(text)
                             if cmd == "help":
-				helpMessage = menuHelp()
-				contact = client.getContact(sender)
-				icon = "http://dl.profile.line-cdn.net/{}".format(contact.pictureStatus)
-				name = contact.displayName
-				link = "https://pa1.narvii.com/6547/d29a5e4bb3405d83fc15cf50ec057f41640618a8_hq.gif"
-				client.sendFooter(to, helpMessage, icon, name, link)
+                                helpMessage = helpmessage()
+                                client.sendMessage(to, str(helpMessage))
                             elif cmd == "sayhelp":
                                 helpTextToSpeech = helptexttospeech()
                                 client.sendMessage(to, str(helpTextToSpeech))
