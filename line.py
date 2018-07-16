@@ -263,11 +263,7 @@ def clientBot(op):
                             cmd = command(text)
                             if cmd == "help":
                                 helpMessage = helpmessage()
-                                contact = client.getContact(sender)
-			        icon = "http://dl.profile.line-cdn.net/{}".format(contact.pictureStatus)
-				name = contact.displayName
-				link = "https://pa1.narvii.com/6547/d29a5e4bb3405d83fc15cf50ec057f41640618a8_hq.gif"
-                                client.sendFooter(to, helpMessage, icon, name, link)
+                                client.sendMessage(to, str(helpMessage))
                             elif cmd == "sayhelp":
                                 helpTextToSpeech = helptexttospeech()
                                 client.sendMessage(to, str(helpTextToSpeech))
